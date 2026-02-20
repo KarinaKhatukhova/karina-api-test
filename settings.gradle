@@ -1,0 +1,14 @@
+pluginManagement {
+    repositories {
+        maven { url "https://nexus.lukit.ru/repository/maven-plugins.gradle.org/" }
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS) // or FAIL_ON_PROJECT_REPOS
+    repositories {
+        maven { url 'https://nexus.lukit.ru/repository/maven-central-proxy' }
+    }
+}
+
+rootProject.name = 'karina-api-test'
