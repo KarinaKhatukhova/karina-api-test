@@ -1,41 +1,33 @@
-package org.example.exercises.part3.rectangle;
+package exercises.main;
 
-public class Rectangle {
+import exercises.part3.person.Person;
+import exercises.rectangle.Rectangle;
 
-    private double width;
-    private double height;
-
-    public Rectangle() {
-        this.width = 0;
-        this.height = 0;
-    }
-
-    public double getWidth() {
-        return width;
-    }
-
-    public void setWidth(double width) {
-        this.width = width;
-    }
-
-    public double getHeight() {
-        return height;
-    }
-
-    public void setHeight(double height) {
-        this.height = height;
-    }
-
-    public double calculateArea() {
-        return width * height;
-    }
-
-    public double calculatePerimeter() {
-        return 2 * (width + height);
-    }
-
+public class Main {
     public static void main(String[] args) {
+        demonstratePerson();
+        demonstrateRectangle();
+    }
 
+    private static void demonstratePerson() {
+        Person person1 = new Person();
+        person1.setName("Anna");
+        person1.setAge(25);
+
+        Person person2 = new Person();
+        person2.setName("Ivan");
+        person2.setAge(30);
+
+        System.out.println("Person 1:");
+        System.out.println("Name: " + person1.getName());
+        System.out.println("Age: " + person1.getAge());
+
+        System.out.println("\nPerson 2:");
+        System.out.println("Name: " + person2.getName());
+        System.out.println("Age: " + person2.getAge());
+    }
+
+    private static void demonstrateRectangle() {
         Rectangle rectangle1 = new Rectangle();
         rectangle1.setWidth(7.5);
         rectangle1.setHeight(4.2);
@@ -57,5 +49,4 @@ public class Rectangle {
                 ", Perimeter = " + rectangle2.calculatePerimeter());
     }
 }
-
 
