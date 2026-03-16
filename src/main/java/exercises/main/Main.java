@@ -1,12 +1,16 @@
 package exercises.main;
 
+import exercises.bankAccount.BankAccount;
+import exercises.bankAccount.SavingsAccount;
 import exercises.part3.person.Person;
 import exercises.rectangle.Rectangle;
 
 public class Main {
     public static void main(String[] args) {
-        demonstratePerson();
-        demonstrateRectangle();
+//        demonstratePerson();
+//        demonstrateRectangle();
+//        demonstrateBankAccount();
+        demonstrateSavingsAccount();
     }
 
     private static void demonstratePerson() {
@@ -47,6 +51,37 @@ public class Main {
                 ", Height = " + rectangle2.getHeight() +
                 ", Area = " + rectangle2.calculateArea() +
                 ", Perimeter = " + rectangle2.calculatePerimeter());
+    }
+
+    private static void demonstrateBankAccount() {
+        BankAccount account = new BankAccount(500);
+        System.out.println("An account with a balance of 500 was created.");
+
+        account.printBalance();
+
+        account.deposit(200);
+        account.withdraw(100);
+//        account.withdraw(700); // попытка снять больше, чем есть
+//        account.withdraw(-50); // некорректная операция
+
+        account.printBalance();
+    }
+
+    private static void demonstrateSavingsAccount() {
+        SavingsAccount savings = new SavingsAccount(500);
+        System.out.println("A savings account with a balance of 500 was created.");
+
+        savings.printBalance();
+
+        savings.deposit(150);
+        savings.withdraw(200); // должно сработать (500 + 150 - 200 = 450, > 100)
+
+        System.out.println();
+        savings.withdraw(400); // должно быть отклонено (450 - 400 = 50, < 100)
+
+        System.out.println();
+        savings.withdraw(300); // 450 - 300 = 150, > 100
+        savings.printBalance();
     }
 }
 
