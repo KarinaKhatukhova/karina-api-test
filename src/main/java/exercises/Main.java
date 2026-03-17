@@ -1,17 +1,23 @@
-package exercises.main;
+package exercises;
 
 import exercises.bankAccount.BankAccount;
 import exercises.bankAccount.SavingsAccount;
 import exercises.part3.person.Person;
 import exercises.rectangle.Rectangle;
+import exercises.calculator.Calculator;
+import exercises.studentAspirant.Aspirant;
+import exercises.studentAspirant.Student;
+
 
 public class Main {
     public static void main(String[] args) {
 //        demonstratePerson();
 //        demonstrateRectangle();
 //        demonstrateBankAccount();
-        demonstrateSavingsAccount();
-    }
+//        demonstrateSavingsAccount();
+//        demonstrateCalculator();
+//        demonstrateStudentAspirant();
+}
 
     private static void demonstratePerson() {
         Person person1 = new Person();
@@ -82,6 +88,35 @@ public class Main {
         System.out.println();
         savings.withdraw(300); // 450 - 300 = 150, > 100
         savings.printBalance();
+    }
+
+    private static void demonstrateCalculator() {
+        Calculator calc = new Calculator();
+
+        calc.multiply(5, 3);
+        calc.multiply(4, 2.5);
+        calc.multiply(3.5, 2.0);
+    }
+
+    private static void demonstrateStudentAspirant() {
+        Student student = new Student("Ivan", "Petrov", "IT-101", 4.8);
+        System.out.println("Student: " + student.firstName + " " + student.lastName);
+        System.out.println("Student scholarship: " + student.getScholarship());
+
+
+        Student excellentStudent = new Student("Maria", "Ivanova", "IT-101", 5.0);
+        System.out.println("\nStudent: " + excellentStudent.firstName + " " + excellentStudent.lastName);
+        System.out.println("Student scholarship: " + excellentStudent.getScholarship());
+
+        Aspirant aspirant = new Aspirant("Alexey", "Sidorov", "ASP-201", 4.7, "Artificial intelligence");
+        System.out.println("\nAspirant: " + aspirant.firstName + " " + aspirant.lastName);
+        System.out.println("Research work: " + aspirant.getResearchWork());
+        System.out.println("Aspirant scholarship: " + aspirant.getScholarship());
+
+        Aspirant excellentAspirant = new Aspirant("Elena", "Smirnova", "ASP-201", 5.0, "Neural networks");
+        System.out.println("\nAspirant: " + excellentAspirant.firstName + " " + excellentAspirant.lastName);
+        System.out.println("Research work: " + excellentAspirant.getResearchWork());
+        System.out.println("Aspirant scholarship: " + excellentAspirant.getScholarship());
     }
 }
 
