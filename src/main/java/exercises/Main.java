@@ -7,6 +7,11 @@ import exercises.rectangle.Rectangle;
 import exercises.calculator.Calculator;
 import exercises.studentAspirant.Aspirant;
 import exercises.studentAspirant.Student;
+import exercises.Automobile.Car;
+import exercises.Automobile.Driver;
+import exercises.Automobile.Engine;
+import exercises.Automobile.Lorry;
+import exercises.Automobile.SportCar;
 
 
 public class Main {
@@ -17,7 +22,8 @@ public class Main {
 //        demonstrateSavingsAccount();
 //        demonstrateCalculator();
 //        demonstrateStudentAspirant();
-}
+        demonstrateAutomobile();
+    }
 
     private static void demonstratePerson() {
         Person person1 = new Person();
@@ -118,5 +124,46 @@ public class Main {
         System.out.println("Research work: " + excellentAspirant.getResearchWork());
         System.out.println("Aspirant scholarship: " + excellentAspirant.getScholarship());
     }
+
+    private static void demonstrateAutomobile() {
+        Driver driver = new Driver("Ivanov Ivan Ivanovich", 35, 12);
+
+        Engine engine = new Engine(150, "Toyota");
+
+        Car car = new Car("Toyota Camry", "sedan", driver, engine);
+
+        System.out.println("=== An ordinary car ===");
+        System.out.println(car);
+        System.out.println("\nActions:");
+        car.start();
+        car.turnRight();
+        car.turnLeft();
+        car.stop();
+
+        Driver truckDriver = new Driver("Petrov Petr Petrovich", 42, 18);
+        Engine truckEngine = new Engine(400, "Volvo");
+        Lorry lorry = new Lorry("Volvo FH", "Cargo", truckDriver, truckEngine, 20000);
+
+        System.out.println("\n=== truck ===");
+        System.out.println(lorry);
+        System.out.println("\nActions:");
+        lorry.start();
+        lorry.turnLeft();
+        lorry.stop();
+
+        Driver sportDriver = new Driver("Sidorov Alexey Vladimirovich", 28, 5);
+        Engine sportEngine = new Engine(600, "Ferrari");
+        SportCar sportCar = new SportCar("Ferrari F8", "Sportcar", sportDriver, sportEngine, 340.5);
+
+        System.out.println("\n=== Sportcar ===");
+        System.out.println(sportCar);
+        System.out.println("\nActions:");
+        sportCar.start();
+        sportCar.turnRight();
+        sportCar.turnRight();
+        sportCar.stop();
+    }
+
 }
+
 
