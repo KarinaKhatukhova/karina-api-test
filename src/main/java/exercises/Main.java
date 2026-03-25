@@ -3,6 +3,7 @@ package exercises;
 import exercises.bankAccount.BankAccount;
 import exercises.bankAccount.SavingsAccount;
 import exercises.part3.person.Person;
+import exercises.phone.Phone;
 import exercises.rectangle.Rectangle;
 import exercises.calculator.Calculator;
 import exercises.studentAspirant.Aspirant;
@@ -14,6 +15,7 @@ import exercises.Automobile.Lorry;
 import exercises.Automobile.SportCar;
 
 
+
 public class Main {
     public static void main(String[] args) {
 //        demonstratePerson();
@@ -22,7 +24,8 @@ public class Main {
 //        demonstrateSavingsAccount();
 //        demonstrateCalculator();
 //        demonstrateStudentAspirant();
-        demonstrateAutomobile();
+//        demonstrateAutomobile();
+          demonstratePhone();
     }
 
     private static void demonstratePerson() {
@@ -162,6 +165,45 @@ public class Main {
         sportCar.turnRight();
         sportCar.turnRight();
         sportCar.stop();
+    }
+
+    public static void demonstratePhone() {
+
+        Phone phone1 = new Phone();
+        phone1.setNumber("+7-999-123-45-67");
+        phone1.setModel("iPhone 16 Pro");
+        phone1.setWeight(187);
+
+        Phone phone2 = new Phone();
+        phone2.setNumber("+7-999-987-65-43");
+        phone2.setModel("Samsung Galaxy S24");
+        phone2.setWeight(196);
+
+        System.out.println("=== Test 1: Calling another phone ===");
+        phone1.receiveCall(phone2);
+
+//        System.out.println("\n=== Test 2: Calling Yourself ===");
+//        phone1.receiveCall(phone1);
+
+        System.out.println("\n=== Information about phones ===");
+        System.out.println("Phone 1: " + phone1);
+        System.out.println("Phone 2: " + phone2);
+
+        System.out.println("\n=== Examination equals и hashCode ===");
+        System.out.println("phone1.equals(phone2): " + phone1.equals(phone2));
+        System.out.println("phone1.hashCode() == phone2.hashCode(): " +
+                (phone1.hashCode() == phone2.hashCode()));
+
+        Phone phone3 = new Phone();
+        phone3.setNumber("+7-999-123-45-67");
+        phone3.setModel("iPhone 16 Pro");
+        phone3.setWeight(187);
+
+        System.out.println("\n=== Examination equals for the same data ===");
+        System.out.println("phone1.equals(phone3): " + phone1.equals(phone3));
+        System.out.println("phone1.hashCode() == phone3.hashCode(): " +
+                (phone1.hashCode() == phone3.hashCode()));
+
     }
 
 }
