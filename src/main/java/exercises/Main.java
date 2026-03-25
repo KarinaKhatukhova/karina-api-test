@@ -3,6 +3,7 @@ package exercises;
 import exercises.bankAccount.BankAccount;
 import exercises.bankAccount.SavingsAccount;
 import exercises.part3.person.Person;
+import exercises.person2.PersonNew;
 import exercises.phone.Phone;
 import exercises.rectangle.Rectangle;
 import exercises.calculator.Calculator;
@@ -25,7 +26,8 @@ public class Main {
 //        demonstrateCalculator();
 //        demonstrateStudentAspirant();
 //        demonstrateAutomobile();
-          demonstratePhone();
+//        demonstratePhone();
+          demonstratePersonNew();
     }
 
     private static void demonstratePerson() {
@@ -204,6 +206,28 @@ public class Main {
         System.out.println("phone1.hashCode() == phone3.hashCode(): " +
                 (phone1.hashCode() == phone3.hashCode()));
 
+    }
+
+    public static void demonstratePersonNew() {
+
+        PersonNew person1 = new PersonNew();
+
+        PersonNew person2 = new PersonNew("Ivan Petrov", 25);
+
+        System.out.println("=== Object 1 (created via PersonNew()) ===");
+        person1.move();
+        person1.talk();
+
+        System.out.println("\n=== Object 2 (created via PersonNew(fullName, age)) ===");
+        person2.move();
+        person2.talk();
+
+        System.out.println("\n=== Setting values for the first object ===");
+        person1.setFullName("Anna Sidorova");
+        person1.setAge(30);
+
+        person1.move();
+        person1.talk();
     }
 
 }
