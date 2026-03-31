@@ -2,11 +2,14 @@ package exercises;
 
 import exercises.bankAccount.BankAccount;
 import exercises.bankAccount.SavingsAccount;
+import exercises.car2.CarNew;
 import exercises.part3.person.Person;
 import exercises.person2.PersonNew;
 import exercises.phone.Phone;
 import exercises.rectangle.Rectangle;
 import exercises.calculator.Calculator;
+import exercises.rectangle2.RectangleNew;
+import exercises.singleton.Singleton;
 import exercises.studentAspirant.Aspirant;
 import exercises.studentAspirant.Student;
 import exercises.Automobile.Car;
@@ -27,7 +30,10 @@ public class Main {
 //        demonstrateStudentAspirant();
 //        demonstrateAutomobile();
 //        demonstratePhone();
-          demonstratePersonNew();
+ //       demonstratePersonNew();
+ //       demonstrateCarNew();
+ //       demonstrateRectangleNew()
+ //         demonstrateSingleton();
     }
 
     private static void demonstratePerson() {
@@ -228,6 +234,44 @@ public class Main {
 
         person1.move();
         person1.talk();
+    }
+
+    public static void demonstrateCarNew() {
+
+        CarNew car1 = new CarNew("Toyota Camry", 2022);
+        CarNew car2 = new CarNew(null, null);
+
+        System.out.println("First car: " + car1.toString());
+        System.out.println("Second car: " + car2.toString());
+    }
+
+    public static void demonstrateRectangleNew() {
+        RectangleNew rectangle1 = new RectangleNew(10, 20);
+        RectangleNew rectangle2 = new RectangleNew(rectangle1);
+
+        System.out.println("First rectangle: " + rectangle1.toString());
+        System.out.println("Second rectangle (copy): " + rectangle2.toString());
+
+        System.out.println("\nEquality Test: " + rectangle1.equals(rectangle2));
+        System.out.println("HashCode of the first: " + rectangle1.hashCode());
+        System.out.println("HashCode of the second: " + rectangle2.hashCode());
+    }
+
+    public static void demonstrateSingleton() {
+
+        // Попытка создать экземпляр через конструктор невозможна:
+        //Singleton s1 = new Singleton(); // Ошибка компиляции
+
+        // Получаем экземпляр через статический метод
+        Singleton instance1 = Singleton.getInstance();
+        Singleton instance2 = Singleton.getInstance();
+
+        // Проверяем, что это один и тот же экземпляр
+        System.out.println("instance1 and instance2 are equal: " + (instance1 == instance2));
+
+        instance1.doSomething();
+        instance2.doSomething();
+
     }
 
 }
