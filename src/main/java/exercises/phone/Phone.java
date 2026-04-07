@@ -41,7 +41,7 @@ public class Phone {
     }
 
     public void receiveCall(Phone caller) {
-        if (this == caller) {
+        if (this.equals(caller)){
             System.out.println("Error: Phone can't call itself!");
         } else {
             System.out.println("Calls " + caller.getNumber());

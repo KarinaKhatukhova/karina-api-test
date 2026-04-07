@@ -1,23 +1,18 @@
 package exercises;
 
+import exercises.Automobile.*;
 import exercises.bankAccount.BankAccount;
 import exercises.bankAccount.SavingsAccount;
+import exercises.calculator.Calculator;
 import exercises.car2.CarNew;
 import exercises.part3.person.Person;
 import exercises.person2.PersonNew;
 import exercises.phone.Phone;
 import exercises.rectangle.Rectangle;
-import exercises.calculator.Calculator;
 import exercises.rectangle2.RectangleNew;
 import exercises.singleton.Singleton;
 import exercises.studentAspirant.Aspirant;
 import exercises.studentAspirant.Student;
-import exercises.Automobile.Car;
-import exercises.Automobile.Driver;
-import exercises.Automobile.Engine;
-import exercises.Automobile.Lorry;
-import exercises.Automobile.SportCar;
-
 
 
 public class Main {
@@ -30,10 +25,10 @@ public class Main {
 //        demonstrateStudentAspirant();
 //        demonstrateAutomobile();
 //        demonstratePhone();
- //       demonstratePersonNew();
- //       demonstrateCarNew();
- //       demonstrateRectangleNew()
- //         demonstrateSingleton();
+        //       demonstratePersonNew();
+        //       demonstrateCarNew();
+        //       demonstrateRectangleNew()
+        //         demonstrateSingleton();
     }
 
     private static void demonstratePerson() {
@@ -241,16 +236,16 @@ public class Main {
         CarNew car1 = new CarNew("Toyota Camry", 2022);
         CarNew car2 = new CarNew(null, null);
 
-        System.out.println("First car: " + car1.toString());
-        System.out.println("Second car: " + car2.toString());
+        System.out.println("First car: " + car1);
+        System.out.println("Second car: " + car2);
     }
 
     public static void demonstrateRectangleNew() {
         RectangleNew rectangle1 = new RectangleNew(10, 20);
         RectangleNew rectangle2 = new RectangleNew(rectangle1);
 
-        System.out.println("First rectangle: " + rectangle1.toString());
-        System.out.println("Second rectangle (copy): " + rectangle2.toString());
+        System.out.println("First rectangle: " + rectangle1);
+        System.out.println("Second rectangle (copy): " + rectangle2);
 
         System.out.println("\nEquality Test: " + rectangle1.equals(rectangle2));
         System.out.println("HashCode of the first: " + rectangle1.hashCode());

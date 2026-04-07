@@ -1,7 +1,7 @@
 package exercises.studentAspirant;
 
 public final class Aspirant extends Student {
-    private String researchWork;
+    private final String researchWork;
 
     public Aspirant(String firstName, String lastName, String group,
                     double averageMark, String researchWork) {

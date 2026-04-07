@@ -1,7 +1,7 @@
 package exercises.Automobile;
 
 public class Driver extends PersonAuto {
-    private int drivingExperience;
+    private final int drivingExperience;
 
     public Driver(String fullName, int age, int drivingExperience) {
         super(fullName, age);

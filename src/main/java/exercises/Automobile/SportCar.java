@@ -1,7 +1,7 @@
 package exercises.Automobile;
 
 public final class SportCar extends Car {
-    private double speed;
+    private final double speed;
 
     public SportCar(String marka, String carClass, Driver driver, Engine engine, double speed) {
         super(marka, carClass, driver, engine);

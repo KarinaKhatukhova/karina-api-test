@@ -6,15 +6,15 @@ public class Singleton {
         System.out.println("An instance Singleton has been created");
     }
 
-    private static class SingletonHolder {
-        private static final Singleton INSTANCE = new Singleton();
-    }
-
     public static Singleton getInstance() {
         return SingletonHolder.INSTANCE;
     }
 
     public void doSomething() {
         System.out.println("Performing an operation on an instance " + this.hashCode());
+    }
+
+    private static class SingletonHolder {
+        private static final Singleton INSTANCE = new Singleton();
     }
 }

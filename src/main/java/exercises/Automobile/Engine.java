@@ -1,8 +1,8 @@
 package exercises.Automobile;
 
 public class Engine {
-    private int power;
-    private String manufacturer;
+    private final int power;
+    private final String manufacturer;
 
 
     public Engine(int power, String manufacturer) {

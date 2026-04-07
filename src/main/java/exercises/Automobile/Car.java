@@ -1,10 +1,10 @@
 package exercises.Automobile;
 
 public class Car {
-    private String marka;
-    private String carClass;
-    private Driver driver;
-    private Engine engine;
+    private final String marka;
+    private final String carClass;
+    private final Driver driver;
+    private final Engine engine;
 
     public Car(String marka, String carClass, Driver driver, Engine engine) {
         this.marka = marka;

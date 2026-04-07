@@ -6,22 +6,6 @@ public class RectangleNew {
     private Integer width;
     private Integer height;
 
-    public Integer getWidth() {
-        return width;
-    }
-
-    public Integer getHeight() {
-        return height;
-    }
-
-    private void setWidth(Integer width) {
-        this.width = width;
-    }
-
-    private void setHeight(Integer height) {
-        this.height = height;
-    }
-
     public RectangleNew(Integer width, Integer height) {
         this.width = width;
         this.height = height;
@@ -32,12 +16,26 @@ public class RectangleNew {
         if (other == null) {
             this.width = 0;
             this.height = 0;
-        }
-
-        else {
+        } else {
             this.width = other.width;
             this.height = other.height;
         }
+    }
+
+    public Integer getWidth() {
+        return width;
+    }
+
+    private void setWidth(Integer width) {
+        this.width = width;
+    }
+
+    public Integer getHeight() {
+        return height;
+    }
+
+    private void setHeight(Integer height) {
+        this.height = height;
     }
 
     @Override

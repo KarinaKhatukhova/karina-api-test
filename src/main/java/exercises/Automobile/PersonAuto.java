@@ -1,8 +1,8 @@
 package exercises.Automobile;
 
 public class PersonAuto {
-    String fullName;
-    int age;
+    private String fullName;
+    private int age;
 
     public PersonAuto(String fullName, int age) {
         this.fullName = fullName;
