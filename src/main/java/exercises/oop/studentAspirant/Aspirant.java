@@ -1,4 +1,4 @@
-package exercises.studentAspirant;
+package exercises.oop.studentAspirant;
 
 public final class Aspirant extends Student {
     private final String researchWork;

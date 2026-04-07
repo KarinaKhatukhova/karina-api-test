@@ -1,18 +1,18 @@
 package exercises;
 
-import exercises.Automobile.*;
-import exercises.bankAccount.BankAccount;
-import exercises.bankAccount.SavingsAccount;
-import exercises.calculator.Calculator;
-import exercises.car2.CarNew;
-import exercises.part3.person.Person;
-import exercises.person2.PersonNew;
-import exercises.phone.Phone;
-import exercises.rectangle.Rectangle;
-import exercises.rectangle2.RectangleNew;
-import exercises.singleton.Singleton;
-import exercises.studentAspirant.Aspirant;
-import exercises.studentAspirant.Student;
+import exercises.oop.Automobile.*;
+import exercises.oop.bankAccount.BankAccount;
+import exercises.oop.bankAccount.SavingsAccount;
+import exercises.oop.calculator.Calculator;
+import exercises.constructors.car2.CarNew;
+import exercises.oop.person.Person;
+import exercises.constructors.person2.PersonNew;
+import exercises.constructors.phone.Phone;
+import exercises.oop.rectangle.Rectangle;
+import exercises.constructors.rectangle2.RectangleNew;
+import exercises.constructors.singleton.Singleton;
+import exercises.oop.studentAspirant.Aspirant;
+import exercises.oop.studentAspirant.Student;
 
 
 public class Main {

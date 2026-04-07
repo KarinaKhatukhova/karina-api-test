@@ -1,4 +1,4 @@
-package exercises.rectangle2;
+package exercises.constructors.rectangle2;
 
 import java.util.Objects;
 

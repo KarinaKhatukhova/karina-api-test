@@ -1,4 +1,4 @@
-package exercises.Automobile;
+package exercises.oop.Automobile;
 
 public final class SportCar extends Car {
     private final double speed;

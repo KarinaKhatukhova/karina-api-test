@@ -1,4 +1,4 @@
-package exercises.Automobile;
+package exercises.oop.Automobile;
 
 public class Driver extends PersonAuto {
     private final int drivingExperience;

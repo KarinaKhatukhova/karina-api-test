@@ -1,4 +1,4 @@
-package exercises.bankAccount;
+package exercises.oop.bankAccount;
 
 public class SavingsAccount extends BankAccount {
 

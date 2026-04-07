@@ -1,4 +1,4 @@
-package exercises.car2;
+package exercises.constructors.car2;
 
 public class CarNew {
     private final String model;

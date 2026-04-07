@@ -1,4 +1,4 @@
-package exercises.Automobile;
+package exercises.oop.Automobile;
 
 public final class Lorry extends Car {
     private final int carrying;

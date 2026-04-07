@@ -1,4 +1,4 @@
-package exercises.phone;
+package exercises.constructors.phone;
 
 import java.util.Objects;
 

@@ -1,4 +1,4 @@
-package exercises.singleton;
+package exercises.constructors.singleton;
 
 public class Singleton {
 

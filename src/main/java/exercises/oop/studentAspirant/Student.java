@@ -1,4 +1,4 @@
-package exercises.studentAspirant;
+package exercises.oop.studentAspirant;
 
 public class Student {
     public String firstName;

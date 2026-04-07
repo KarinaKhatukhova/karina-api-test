@@ -1,4 +1,4 @@
-package exercises.Automobile;
+package exercises.oop.Automobile;
 
 public class Engine {
     private final int power;

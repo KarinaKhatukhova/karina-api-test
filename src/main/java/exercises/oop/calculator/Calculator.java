@@ -1,4 +1,4 @@
-package exercises.calculator;
+package exercises.oop.calculator;
 
 public class Calculator {
 

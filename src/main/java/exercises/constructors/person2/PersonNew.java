@@ -1,4 +1,4 @@
-package exercises.person2;
+package exercises.constructors.person2;
 
 public class PersonNew {
     private String fullName;

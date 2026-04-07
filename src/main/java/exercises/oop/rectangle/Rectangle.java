@@ -1,4 +1,4 @@
-package exercises.rectangle;
+package exercises.oop.rectangle;
 
 public class Rectangle {
 

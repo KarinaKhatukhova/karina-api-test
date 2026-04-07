@@ -1,4 +1,4 @@
-package exercises.part3.person;
+package exercises.oop.person;
 
 public class Person {
     public String name;
