@@ -29,31 +29,31 @@ public class MainFinalProject {
     }
 
     public static Coffee createCoffeeObject() {
-        Coffee coffee = new Coffee();
-
-        coffee.setName("TestCoffee");
-        coffee.setPrice(BigDecimal.valueOf(250.00));
-        coffee.setWeight(0.25f);
-        coffee.setManufacturer(Manufacturer.NESCAFE);
-        coffee.setCountry(Country.BRAZIL);
-        coffee.setPackage(MyPackage.PAPER);
-        coffee.setRoasting(Roasting.MEDIUM);
-        coffee.setCoffeeType(CoffeeType.GROUND);
+        Coffee coffee = new Coffee(
+                "TestCoffee",
+                BigDecimal.valueOf(250),
+                0.35f,
+                Manufacturer.NESCAFE,
+                Country.BRAZIL,
+                MyPackage.PAPER,
+                CoffeeType.GROUND,
+                Roasting.MEDIUM
+        );
 
         return coffee;
     }
 
     public static Tea createTeaObject() {
-        Tea tea = new Tea();
-
-        tea.setPackage(MyPackage.BOX);
-        tea.setName("TestTea");
-        tea.setCountry(Country.CHINA);
-        tea.setManufacturer(Manufacturer.LIPTON);
-        tea.getTeaType(TeaType.BERRY);
-        tea.setPrice(BigDecimal.valueOf(150.00));
-        tea.setAroma(Aroma.FRUIT);
-        tea.setWeight(0.25f);
+        Tea tea = new Tea(
+                "TestTea",
+                BigDecimal.valueOf(250),
+                0.15f,
+                Manufacturer.LIPTON,
+                Country.CHINA,
+                MyPackage.BOX,
+                TeaType.BERRY,
+                Aroma.FRUIT
+        );
 
         return tea;
     }

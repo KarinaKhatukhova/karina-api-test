@@ -7,59 +7,27 @@ import exercises.finalProject.store.online.model.enumeration.MyPackage;
 import java.math.BigDecimal;
 
 public abstract class Drink {
-    private String name;
-    private BigDecimal price;
-    private Float weight;
-    private Manufacturer manufacturer;
-    private Country country;
-    private MyPackage mypackage;
+    private final String name;
+    private final BigDecimal price;
+    private final Float weight;
+    private final Manufacturer manufacturer;
+    private final Country country;
+    private final MyPackage mypackage;
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
+    protected Drink(String name, BigDecimal price, Float weight, Manufacturer manufacturer, Country country, MyPackage mypackage) {
         this.name = name;
-    }
-
-    public BigDecimal getPrice() {
-        return price;
-    }
-
-    public void setPrice(BigDecimal price) {
         this.price = price;
-    }
-
-    public Float getWeight() {
-        return weight;
-    }
-
-    public void setWeight(Float weight) {
         this.weight = weight;
-    }
-
-    public Manufacturer getManufacturer() {
-        return manufacturer;
-    }
-
-    public void setManufacturer(Manufacturer manufacturer) {
         this.manufacturer = manufacturer;
-    }
-
-    public Country getCountry() {
-        return country;
-    }
-
-    public void setCountry(Country country) {
         this.country = country;
-    }
-
-    public MyPackage getPackage() {
-        return mypackage;
-    }
-
-    public void setPackage(MyPackage mypackage) {
         this.mypackage = mypackage;
     }
+
+    public String getName() { return name; }
+    public BigDecimal getPrice() { return price; }
+    public Float getWeight() { return weight; }
+    public Manufacturer getManufacturer() { return manufacturer; }
+    public Country getCountry() { return country; }
+    public MyPackage getMyPackage() { return mypackage; }
 
 }
