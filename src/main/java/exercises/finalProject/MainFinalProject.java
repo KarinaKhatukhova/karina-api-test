@@ -84,24 +84,11 @@ public class MainFinalProject {
         order.setUser(user);
 
         CartItem[] createCartItem = createCartItem();
-        BigDecimal total = calculateTotalPrice(createCartItem);
+        BigDecimal total = order.calculateTotalPrice(createCartItem);
         order.setTotalPrice(total);
         order.setCartItemArray(createCartItem);
 
         return order;
-    }
-
-    private static BigDecimal calculateTotalPrice(CartItem[] cartItems) {
-        BigDecimal total = BigDecimal.ZERO;
-
-        for (CartItem item : cartItems) {
-            BigDecimal itemPrice = item.getDrink()
-                    .getPrice()
-                    .multiply(BigDecimal.valueOf(item.getCount()));
-            total = total.add(itemPrice);
-        }
-
-        return total;
     }
 
     public static void getOrderInfo() {

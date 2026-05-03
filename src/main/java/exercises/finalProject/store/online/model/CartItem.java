@@ -1,5 +1,7 @@
 package exercises.finalProject.store.online.model;
 
+import java.math.BigDecimal;
+
 public class CartItem {
     private Drink drink;
     private Short count;
@@ -23,5 +25,13 @@ public class CartItem {
             );
         }
         this.count = count;
+    }
+
+    public BigDecimal getTotalPrice() {
+        if (drink == null || count == null || count < 1) {
+            return BigDecimal.ZERO;
+        }
+        BigDecimal price = drink.getPrice();
+        return price.multiply(BigDecimal.valueOf(count));
     }
 }

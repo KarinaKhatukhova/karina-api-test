@@ -61,4 +61,18 @@ public class Order {
     public void setCartItemArray(CartItem[] cartItemArray) {
         this.cartItemArray = cartItemArray;
     }
+
+    public BigDecimal calculateTotalPrice(CartItem[] cartItemArray) {
+        if (cartItemArray == null || cartItemArray.length == 0) {
+            return BigDecimal.ZERO;
+        }
+
+        BigDecimal total = BigDecimal.ZERO;
+        for (CartItem item : cartItemArray) {
+            if (item != null) {
+                total = total.add(item.getTotalPrice());
+            }
+        }
+        return total;
+    }
 }
