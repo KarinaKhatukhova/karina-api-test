@@ -17,6 +17,11 @@ public class CartItem {
     }
 
     public void setCount(Short count) {
+        if (count == null || count < 1) {
+            throw new IllegalArgumentException(
+                    "The quantity of the product must be > 0. Сount: " + count
+            );
+        }
         this.count = count;
     }
 }

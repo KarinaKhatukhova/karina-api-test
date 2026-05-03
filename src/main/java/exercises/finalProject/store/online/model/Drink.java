@@ -15,6 +15,28 @@ public abstract class Drink {
     private final MyPackage mypackage;
 
     protected Drink(String name, BigDecimal price, Float weight, Manufacturer manufacturer, Country country, MyPackage mypackage) {
+        if (name == null || name.isBlank()) {
+            throw new IllegalArgumentException("The drink name cannot be empty");
+        }
+
+        if (price == null || price.compareTo(BigDecimal.ZERO) <= 0) {
+            throw new IllegalArgumentException("The price cannot be negative or greater than 0:: " + price);
+        }
+
+        if (weight == null || weight <= 0) {
+            throw new IllegalArgumentException("Weight must be greater than 0: " + weight);
+        }
+
+        if (manufacturer == null) {
+            throw new IllegalArgumentException("Manufacturer cannot be null");
+        }
+        if (country == null) {
+            throw new IllegalArgumentException("Country cannot be null");
+        }
+        if (mypackage == null) {
+            throw new IllegalArgumentException("Packaging cannot be null");
+        }
+
         this.name = name;
         this.price = price;
         this.weight = weight;
