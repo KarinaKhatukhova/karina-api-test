@@ -22,15 +22,8 @@ public class MainFinalProject {
     }
 
     public static Address createAddressObject() {
-        Address address = new Address();
-
-        address.setCountry(Country.CHINA);
-        address.setCity("TestCity");
-        address.setRegion("TestRegion");
-        address.setHouse("testHouse");
-        address.setIndex("testIndex");
-        address.setStreet("testStreet");
-        address.setApartment("testApartment");
+        Address address = new Address(Country.CHINA, "TestRegion", "TestCity",
+                "testStreet", "testHouse", "testApartment", "testIndex");
 
         return address;
     }
@@ -117,10 +110,10 @@ public class MainFinalProject {
         System.out.println("\n*** Order info *** ");
         System.out.println("Order create date: " + orderInfo.getOrderDate());
         System.out.println("Order customer: " + orderInfo.getUser().getName() + " " + orderInfo.getUser().getLastName());
-        System.out.println("Order address: City: " + orderInfo.getAddress().getCity() + ", Street: " + orderInfo.getAddress().getStreet());
+        System.out.println("Order address: City: " + orderInfo.getAddress().city + ", Street: " + orderInfo.getAddress().street);
         System.out.println("Order status: " + orderInfo.getStatus());
         System.out.println("Order list:\n");
-        for(CartItem item : orderInfo.getCartItemArray()) {
+        for (CartItem item : orderInfo.getCartItemArray()) {
             System.out.println("Drink: " + item.getDrink().getName() + ", count: " + item.getCount());
         }
         System.out.println("\nOrder total Price: " + orderInfo.getTotalPrice());
